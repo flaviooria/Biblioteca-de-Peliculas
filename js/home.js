@@ -216,7 +216,19 @@ btn_search.addEventListener('click', async (e) => {
                             let response = await insertMovieInFavorites(movie_obtenida, new_user.id);
 
                             if (response) {
-                                alert('Pelicula insertada')
+                                swal({
+                                    title: "Pelicula Añadida",
+                                    text: "Tu pelicula ha sido añadidad correctamente!",
+                                    icon: "success",
+                                    button: "ok",
+                                  });
+                            } else {
+                                swal({
+                                    title: "Pelicula no añadida",
+                                    text: "No se pudo añadir la pelicula,intentalo de nuevo",
+                                    icon: "error",
+                                    button: "ok",
+                                  });
                             }
                         }
                     }
@@ -339,7 +351,19 @@ input_search.addEventListener('input', async (e) => {
                             let response = await insertMovieInFavorites(movie_obtenida, new_user.id);
 
                             if (response) {
-                                alert('Pelicula insertada')
+                                swal({
+                                    title: "Pelicula Añadida",
+                                    text: "Tu pelicula ha sido añadidad correctamente!",
+                                    icon: "success",
+                                    button: "ok",
+                                  });
+                            } else {
+                                swal({
+                                    title: "Pelicula no añadida",
+                                    text: "No se pudo añadir la pelicula,intentalo de nuevo",
+                                    icon: "error",
+                                    button: "ok",
+                                  });
                             }
                         }
                     }
@@ -473,7 +497,19 @@ menu_genre.addEventListener('change', async (e) => {
                             let response = await insertMovieInFavorites(movie_obtenida, new_user.id);
 
                             if (response) {
-                                alert('Pelicula insertada')
+                                swal({
+                                    title: "Pelicula Añadida",
+                                    text: "Tu pelicula ha sido añadidad correctamente!",
+                                    icon: "success",
+                                    button: "ok",
+                                  });
+                            } else {
+                                swal({
+                                    title: "Pelicula no añadida",
+                                    text: "No se pudo añadir la pelicula,intentalo de nuevo",
+                                    icon: "error",
+                                    button: "ok",
+                                  });
                             }
                         }
                     }

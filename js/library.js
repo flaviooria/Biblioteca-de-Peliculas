@@ -123,9 +123,19 @@ async function getAllFavoritesMovies(id_user) {
                         if (res == 200) {
                             //Eliminamos la card de la biblioteca 
                             card.remove()
-                            alert('Pelicula eliminada')
+                            swal({
+                                title: "Pelicula Eliminada",
+                                text: "Tu pelicula se elimino correctamente!",
+                                icon: "success",
+                                button: "ok",
+                              });
                         } else {
-                            alert('Pelicula no eliminada ')
+                            swal({
+                                title: "Pelicula no eliminada",
+                                text: "Tu pelicula no se pudo eliminar!",
+                                icon: "error",
+                                button: "ok",
+                              });
                         }
                     }
                 }
