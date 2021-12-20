@@ -61,7 +61,7 @@ const requestOptions = {
 
 
 
-//Functions Evenets
+//Functions Events
 
 //Evento que siempre esta escuchando si hay un usuario logeado, o sin loguear
 onAuthStateChanged(auth, async (user) => {
@@ -113,7 +113,7 @@ btn_search.addEventListener('click', async (e) => {
     let target = e.target
     let input = target.parentElement
 
-    //Aqui capturamos el valord del input
+    //Aqui capturamos el valor del input
     let data = input.children[0].value
 
     if (data != '') {
@@ -380,6 +380,7 @@ window.addEventListener('load', async (e) => {
     const {
         genres
     } = data
+    
     for (const {
             id,
             name
