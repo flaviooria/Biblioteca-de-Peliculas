@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlayList Creator</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <section class="content-description">
+            <h2 class="display-1">Bienvenido a Movie List Creator</h2>
+            <p class="lead">Inicia Sesión o Registrate para acceder.</p>
+        </section>
+        <section class="content-form">
+            <form action="" class="form">
+                <label>Correo Electronico</label>
+                <input id="email" type="email" placeholder="example@example.com" required> 
+                <label>Contraseña</label>
+                <input id="password" type="password" placeholder="contraseña" required>
+                <div class="buttons">
+                    <button class="btn-login" type="submit">Iniciar Sesión</button>
+                    <a href="./pages/register_page.html" class="btn-register">Registrate</a>
+                </div>
+                <div class="buttons-access-google">
+                    <p> Acceder con: </p>
+                    <button class="btn-google" type="submit">Google</button>
+                </div>
+            </form>
+        </section>
+    </div>
+    <script type="module" src="./js/app.js"></script>
+</body>
+
+</html>

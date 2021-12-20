@@ -1,0 +1,151 @@
+$breakpoint-tablet: 768px;
+$font: 'Lato',
+sans-serif;
+$border-btn: rgba(43, 117, 43, .8);
+$btn-color: #9CC489;
+$breakpoint-tablet: 768px;
+
+@mixin btn-default {
+    padding: 8px;
+    color: #fff;
+    background-color: $btn-color;
+    border: 2px solid $border-btn;
+    border-radius: 8px;
+    font-size: 1.085em;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(../assets/images/background.svg);
+    background-repeat: repeat-y;
+    background-size: 100%;
+    font-family: $font;
+}
+
+.container-fluid {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 600px 1fr;
+    height: 100vh;
+
+    .content {
+
+        &-description {
+            width: 100%;
+            color: #fff;
+            padding: 20px;
+            grid-column: 1 / 2;
+
+            & .display-1 {
+                font-weight: normal;
+                font-size: 3.5rem;
+                line-height: 1.2em;
+            }
+
+            & .lead {
+                font-weight: normal;
+                font-size: 1.5rem;
+                line-height: 1.2em;
+            }
+        }
+
+        &-form {
+            grid-column: 2 / -1;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+
+            & .form {
+                /* From https://css.glass */
+                background: rgba(255, 255, 255, 0.06);
+                border-radius: 16px;
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(1em);
+                -webkit-backdrop-filter: blur(1em);
+                border: 1px solid rgba(43, 117, 43, .48);
+                width: 50%;
+                height: auto;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                padding: 20px;
+
+                & label {
+                    color: #fff;
+                    font-size: 1.2em;
+                    font-weight: 600;
+                }
+
+                & input {
+                    padding: 8px;
+                    border-radius: 5px;
+                    outline: none;
+                    border: 2px solid $border-btn;
+                    margin: 10px 0;
+                    height: 25px;
+                    font-size: 1em;
+                }
+
+                & .buttons {
+                    display: flex;
+                    justify-content: space-evenly;
+
+                    & .btn-login,
+                    & .btn-register {
+                        @include btn-default();
+
+                        &:hover {
+                            color: #fff;
+                            background-color: #4b7ed4;
+                            border: 2px solid #fff;
+                        }
+                    }
+                }
+
+                & .buttons-access-google {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    margin: 30px 0;
+
+                    & .btn-google {
+                        @include btn-default();
+                        width: 50%;
+
+                        &:hover {
+                            color: #fff;
+                            background-color: #4b7ed4;
+                            border: 2px solid #fff;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container-fluid {
+        grid-template-rows: 300px 1fr;
+        grid-template-columns: none;
+
+        .content {
+            &-description {
+                grid-row: 1 / 2;
+            }
+
+            &-form {
+                margin-top: 50px;
+                grid-row: 2 / -1;
+                justify-content: center;
+            }
+        }
+    }
+}

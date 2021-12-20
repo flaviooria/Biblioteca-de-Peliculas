@@ -1,0 +1,62 @@
+$btn-color: #9CC489;
+
+.search-bar {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+
+    & .form-search {
+        display: flex;
+        width: 50%;
+        padding: 8px;
+
+        input {
+            margin-right: 10px;
+        }
+    }
+}
+
+.container-movies {
+    margin: 0 30px;
+    height: auto;
+    padding: 20px;
+    display: grid;
+    gap: 30px;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, 350px);
+    border-radius: 10px;
+    background-color: $btn-color;
+
+    & .card {
+        height: auto;
+
+        & .poster {
+            height: 160px;
+            object-fit: cover;
+        }
+
+        & .title {
+            font-size: 1.085em;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        &-subtitle {
+            display: -webkit-box;
+            -webkit-line-clamp: 6;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            /*si no se declara añade los ... pero muestra todo el texto*/
+        }
+    }
+}
+
+.container-search {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
